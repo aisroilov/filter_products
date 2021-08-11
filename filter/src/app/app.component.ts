@@ -7,6 +7,7 @@ import { JsonService } from './services/json.service';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  title = "Filter Products";
   data!: string;
   products!: string[];  
 

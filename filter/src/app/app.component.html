@@ -1,1 +1,40 @@
+<!-- <div class="form-group">
+  <input type="text" class="form-control" placeholder="Type to search" [(ngModel)]="data">
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of Users | filter:data">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div class="container p-3 my-3 bg-dark text-white">
+    <h1>Filter Products</h1>
+    <p>Enter the product name</p>   
+   
+</div>
+
+<div class="container">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Type to search" [(ngModel)]="data">
+  </div>
+
+  <div class="product" *ngFor="let product of products | filter:data" >
+      <span><b>{{product.name}}</b></span><br>
+      <span>{{product.category}}</span><br>
+      <span>€ {{product.price}}</span>
+  </div>
+</div>
+
 <router-outlet></router-outlet>

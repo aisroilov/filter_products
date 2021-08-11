@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "filter": {
+    "filtertest": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/filter",
+            "outputPath": "dist/filtertest",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.less"
             ],
             "scripts": []
@@ -72,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "filter:build:production"
+              "browserTarget": "filtertest:build:production"
             },
             "development": {
-              "browserTarget": "filter:build:development"
+              "browserTarget": "filtertest:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "filter:build"
+            "browserTarget": "filtertest:build"
           }
         },
         "test": {
@@ -107,5 +108,5 @@
       }
     }
   },
-  "defaultProject": "filter"
+  "defaultProject": "filtertest"
 }
